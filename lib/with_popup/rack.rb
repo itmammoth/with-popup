@@ -6,13 +6,17 @@ class WithPopup::Rack
   def call(env)
     @env = env
     @status, @headers, @response = @app.call(env)
-    return [@status, @headers, @response] unless @status == 200 && html? && popup_param
-    body = @response.body.sub('</body>', script_for_insertion + '</body>')
+    return [@status, @headers, @response] unless need_injection?
+    body = inject_js(@response.body)
     clear_param!
     [@status, @headers, [body]]
   end
 
   private
+
+  def need_injection?
+    @status == 200 && html? && popup_param
+  end
 
   def html?
     @headers["Content-Type"].try(:include?, "text/html")
@@ -30,12 +34,9 @@ class WithPopup::Rack
     session.delete :_with_popup
   end
 
-  def script_for_insertion
-    if popup_param == :close
-      close_popup_js
-    else
-      reload_popup_js
-    end
+  def inject_js(body)
+    js = popup_param == :close ? close_popup_js : reload_popup_js
+    body.sub('</body>', js + '</body>')
   end
 
   def close_popup_js
