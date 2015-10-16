@@ -1,0 +1,9 @@
+<h1>Dummy of with_popup</h1>
+
+<span style="color: red;"><%= @error %></span>
+<%= form_tag '/submit' do %>
+  <%= text_field_tag :name %>
+  <%= submit_tag 'Submit (300x200)', class: 'popup-without-data-options' %>
+  <%= submit_tag 'Submit (600x400)', class: 'popup-with-data-options',
+        'data-popup-option': 'width=600, height=400, menubar=no, toolbar=no, scrollbars=yes' %>
+<% end %>
