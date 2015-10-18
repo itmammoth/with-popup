@@ -1,9 +1,10 @@
 Dummy::Application.routes.draw do
   root to: 'top#index'
 
-  controller :top do
-    post :submit, action: :submit
-    get :done, action: :done
-    get :reloaded, action: :reloaded
+  resources :posts, only: %i(new create) do
+    collection do
+      get :done, action: :done
+      get :reload, action: :reload
+    end
   end
 end

@@ -1,11 +1,19 @@
-require 'with_popup/controller.rb'
+require 'with_popup/controller'
+require 'with_popup/helpers'
 
 module WithPopup
   class Engine < ::Rails::Engine
     config.app_middleware.use 'WithPopup::Rack'
-    initializer 'with_popup.action_controller_helpers' do
+
+    initializer 'with_popup.include_modules' do
       ActiveSupport.on_load :action_controller do
         include WithPopup::Controller
+      end
+      ActiveSupport.on_load :action_view do
+        include WithPopup::Helpers::FormTagHelper
+        ActionView::Helpers::FormBuilder.class_eval do
+          include WithPopup::Helpers::FormHelper
+        end
       end
     end
   end

@@ -1,0 +1,19 @@
+<h1>FormHelper</h1>
+
+<%= form_for @post do |f| %>
+  <span style="color: red;"><%= @error %></span>
+  <%= f.text_field :body %>
+
+  <h2>Buttons</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td><%= f.submit_with_popup 'submit_tag' %></td>
+        <td><%= f.submit_with_popup 'submit_tag (with popup_features)', popup_features: 'width=300,height=200' %></td>
+        <td><%= f.submit_with_popup 'submit_tag (with confirm)', data: { confirm: 'Are you sure?' } %></td>
+        <td><%= f.button_with_popup 'button_tag' %></td>
+    </tbody>
+  </table>
+
+  <%= hidden_field_tag :view, @view %>
+<% end %>
