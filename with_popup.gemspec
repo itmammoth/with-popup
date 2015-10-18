@@ -7,10 +7,10 @@ require "with_popup/version"
 Gem::Specification.new do |s|
   s.name        = "with_popup"
   s.version     = WithPopup::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of WithPopup."
+  s.authors     = ["itmammoth"]
+  s.email       = ["itmammoth@gmail.com"]
+  s.homepage    = "https://github.com/itmammoth/with-popup"
+  s.summary     = "WithPopup allows you to open a popup window on submitting."
   s.description = "TODO: Description of WithPopup."
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
