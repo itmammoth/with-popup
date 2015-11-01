@@ -1,0 +1,25 @@
+<h1>FormTagHelper</h1>
+
+<h2>Buttons</h2>
+<%= form_tag posts_path do %>
+  <span style="color: red;"><%= @error %></span>
+  <%= text_field :post, :body %>
+  <table>
+    <tbody>
+      <tr>
+        <td><%= submit_with_popup_tag 'submit_tag' %></td>
+        <td><%= submit_with_popup_tag 'submit_tag (with popup options)', with_popup: { src: src_posts_path, features: 'width=300,height=200' } %></td>
+        <td><%= submit_with_popup_tag 'submit_tag (with confirm)', data: { confirm: 'Are you sure?' } %></td>
+        <td><%= image_submit_with_popup_tag 'submit.png', width: 100 %></td>
+        <td><%= button_with_popup_tag 'button_tag' %></td>
+        <td><%= button_with_popup_to 'button_to' %></td>
+    </tbody>
+  </table>
+  <%= hidden_field_tag :view, @view %>
+<% end %>
+
+<h2>Links (without error)</h2>
+<%= link_with_popup_to 'link_to', posts_path(post: { body: 'OK' }), method: :post %>
+<%= link_with_popup_to_if true, 'link_to_if', posts_path(post: { body: 'OK' }), method: :post %>
+<%= link_with_popup_to_unless false, 'link_to_unless', posts_path(post: { body: 'OK' }), method: :post %>
+<%= link_with_popup_to_unless_current 'link_to_unless_current', posts_path(post: { body: 'OK' }), method: :post %>

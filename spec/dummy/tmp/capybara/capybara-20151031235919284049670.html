@@ -1,0 +1,41 @@
+<!DOCTYPE html><html><head>
+  <title>Dummy</title>
+  <link data-turbolinks-track="true" href="/assets/application.css" media="all" rel="stylesheet">
+  <script data-turbolinks-track="true" src="/assets/application.js"></script>
+  
+</head>
+<body>
+
+<h1>FormTagHelper</h1>
+
+<h2>Buttons</h2>
+<form accept-charset="UTF-8" action="/posts" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+  <span style="color: red;">Can't be blank</span>
+  <div class="field_with_errors"><input id="post_body" name="post[body]" type="text" value=""></div>
+  <table>
+    <tbody>
+      <tr>
+        <td><input data-with-popup="true" name="commit" type="submit" value="submit_tag"></td>
+        <td><input data-with-popup-features="width=300,height=200" data-with-popup="true" name="commit" popup_features="width=300,height=200" type="submit" value="submit_tag (with popup_features)"></td>
+        <td><input data-confirm="Are you sure?" data-with-popup="true" name="commit" type="submit" value="submit_tag (with confirm)"></td>
+        <td><input alt="Submit" data-with-popup="true" src="/assets/submit.png" type="image" width="100"></td>
+        <td><button data-with-popup="true" name="button" type="submit">button_tag</button></td>
+        <td><div><input data-with-popup="true" type="submit" value="button_to"></div></td>
+    </tr></tbody>
+  </table>
+  <input id="view" name="view" type="hidden" value="form_tag_helper">
+
+<h2>Links (without error)</h2>
+<a data-method="post" data-with-popup="true" href="/posts?post%5Bbody%5D=OK" rel="nofollow">link_to</a>
+<a data-method="post" data-with-popup="true" href="/posts?post%5Bbody%5D=OK" rel="nofollow">link_to_if</a>
+<a data-method="post" data-with-popup="true" href="/posts?post%5Bbody%5D=OK" rel="nofollow">link_to_unless</a>
+<a data-method="post" data-with-popup="true" href="/posts?post%5Bbody%5D=OK" rel="nofollow">link_to_unless_current</a>
+
+
+      <script type="text/javascript">
+        var popup = open('', 'withPopup');
+        popup && popup.close();
+      </script>
+
+
+</form></body></html>

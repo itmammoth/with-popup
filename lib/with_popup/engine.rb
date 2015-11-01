@@ -3,6 +3,7 @@ require 'with_popup/helpers'
 
 module WithPopup
   class Engine < ::Rails::Engine
+    require 'jquery-rails'
     config.app_middleware.use 'WithPopup::Rack'
 
     initializer 'with_popup.include_modules' do
@@ -15,6 +16,12 @@ module WithPopup
           include WithPopup::Helpers::FormHelper
         end
       end
+    end
+
+    config.generators do |g|
+      g.test_framework :rspec, fixture: false
+      g.assets false
+      g.helper false
     end
   end
 end

@@ -13,12 +13,17 @@ Gem::Specification.new do |s|
   s.summary     = "WithPopup allows you to open a popup window on submitting."
   s.description = "TODO: Description of WithPopup."
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
+  s.files = Dir["{app,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 4.0"
-  s.add_development_dependency "jquery-rails", "~> 3"
-  s.add_development_dependency "sqlite3", "~> 1.3"
+  s.add_dependency 'jquery-rails', '~> 3.0'
+
+  s.add_development_dependency 'sqlite3', '~> 1.3.0'
+  s.add_development_dependency 'rspec-rails', '~> 3.3.0'
+  s.add_development_dependency 'capybara', '~> 2.5.0'
+  s.add_development_dependency 'poltergeist', '~> 1.7.0'
+  s.add_development_dependency 'launchy'
   s.add_development_dependency 'pry-rails'
   s.add_development_dependency 'pry-byebug'
 end
