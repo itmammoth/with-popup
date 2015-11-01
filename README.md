@@ -61,7 +61,7 @@ end
 ```
 
 #### Note:
-These ```*_with_popup``` methods nerver interrupt the original click actions, just open popup windows simultaneously.
+These ```*_with_popup``` methods never interrupt the original click actions, just open popup windows simultaneously.
 
 ## Form helper methods
 
