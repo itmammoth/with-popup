@@ -5,7 +5,7 @@ WithPopup makes it easy to open and manage a popup window in your rails applicat
 
 ## Demo
 
-![Demo](https://raw.githubusercontent.com/itmammoth/with-popup/master/demo.gif "Demo")
+![Demo](https://raw.githubusercontent.com/itmammoth/with_popup/master/demo.gif "Demo")
 
 ## Requirement
 
@@ -17,7 +17,7 @@ WithPopup makes it easy to open and manage a popup window in your rails applicat
 Add this in your ```Gemfile```, and run the ```bundle install``` command.
 
 ```ruby
-gem 'with-popup'
+gem 'with_popup'
 ```
 
 Add this in your ```app/assets/javascripts/application.js``` below jquery.
