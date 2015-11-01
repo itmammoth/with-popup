@@ -14,7 +14,7 @@ WithPopup makes it easy to open and manage a popup window in your rails applicat
 
 Add this in your ```Gemfile```, and run the ```bundle install``` command.
 
-```Gemfile
+```ruby
 gem 'with-popup'
 ```
 
@@ -24,16 +24,16 @@ WithPopup provides some helper methods managing a popup window in view and contr
 
 Typical usage is like this.
 
-```
+```HTML+ERB
 # In your erb file
 <%= form_for @post do |f| %>
   ...
   # Submit while opening a popup window
   <%= f.submit_with_popup %>
 <% end %>
+```
 
-----------
-
+```Ruby
 # In your controller
 def create
   @post = Post.new(params[:post].permit(...))
@@ -78,9 +78,9 @@ All helper methods are defined to deledate the processing to the original method
 
 ### Option
 
-You can give a particular option for then javascript ```window.open``` function.
+You can give a particular option for the javascript ```window.open``` function.
 
-```
+```HTML+ERB
 # In your erb file
 <%= submit_with_popup_tag 'Create and Print',
       with_popup: { src: '/loading', features: 'width=300,height=200' } %>
@@ -88,7 +88,7 @@ You can give a particular option for then javascript ```window.open``` function.
 
 Its popup window will be opened like this
 
-```
+```Javascript
 window.open('', '/loading', 'width=300,height=200');
 ```
 
