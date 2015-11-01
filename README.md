@@ -63,7 +63,7 @@ end
 #### Note:
 These ```*_with_popup``` methods never interrupt the original click actions, just open popup windows simultaneously.
 
-## Form helper methods
+### Form helper methods
 
 All helper methods are defined to deledate the processing to the original methods they are wrapping, so you can invoke them as you do with the original methods.
 
@@ -103,14 +103,12 @@ Its popup window will be opened like this
 window.open('', '/loading', 'width=300,height=200');
 ```
 
-
-## Controller methods
+### Controller methods
 
 | Methods            | Description                                             |
 |--------------------|---------------------------------------------------------|
 | realod_popup(path) | Reload the popup window you opened with indicated path. |
 | close_popup        | Close the popup window you opened.                      |
-
 
 ## Contribution
 * Fork the master branch, and clone it.
