@@ -1,7 +1,7 @@
 .DS_Store
 .bundle/
 log/*.log
-pkg/
+*.gem
 spec/examples.txt
 spec/dummy/.envrc
 spec/dummy/db/*.sqlite3
