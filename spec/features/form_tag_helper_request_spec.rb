@@ -42,10 +42,10 @@ describe 'FormTagHelper', js: :true do
     end
   end
 
-  describe 'click submit_tag (with popup_features)' do
+  describe 'click submit_tag (with popup options)' do
     context 'when body is blank' do
       before do
-        click_button 'submit_tag (with popup_features)'
+        click_button 'submit_tag (with popup options)'
       end
       it_behaves_like 'closing_popup'
     end
@@ -53,7 +53,7 @@ describe 'FormTagHelper', js: :true do
     context 'when body is present' do
       before do
         fill_in 'post_body', with: 'test'
-        click_button 'submit_tag (with popup_features)'
+        click_button 'submit_tag (with popup options)'
       end
       it_behaves_like 'reloading_popup'
       # Not work...
