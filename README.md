@@ -78,7 +78,7 @@ All helper methods are defined to deledate the processing to the original method
 
 ### Option
 
-You can give a particular option for then javascript ```window.open``` function.
+You can give a particular option for the javascript ```window.open``` function.
 
 ```
 # In your erb file
