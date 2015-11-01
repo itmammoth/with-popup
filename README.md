@@ -5,7 +5,7 @@ WithPopup makes it easy to open and manage a popup window in your rails applicat
 
 ## Demo
 
-![Demo](http://imgur.com/HQKzftT "Demo")
+![Demo](https://raw.githubusercontent.com/itmammoth/with-popup/master/demo.gif "Demo")
 
 ## Requirement
 
