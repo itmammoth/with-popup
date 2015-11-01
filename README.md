@@ -20,6 +20,15 @@ Add this in your ```Gemfile```, and run the ```bundle install``` command.
 gem 'with-popup'
 ```
 
+Add this in your ```app/assets/javascripts/application.js``` below jquery.
+
+```Javascript
+//= require jquery
+//= require jquery_ujs
+//= require with_popup
+//= require_tree .
+```
+
 ## Usage
 
 WithPopup provides some helper methods managing a popup window in view and controller contexts, which are wrapping form helper methods that create clickable DOM (like ```link_to```, ```submit_tag```) with ```*_with_popup``` naming.
