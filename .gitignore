@@ -3,9 +3,10 @@
 log/*.log
 pkg/
 spec/examples.txt
+spec/dummy/.envrc
 spec/dummy/db/*.sqlite3
 spec/dummy/db/*.sqlite3-journal
-spec/dummy/log/*.log
-spec/dummy/tmp/
+spec/dummy/log
+spec/dummy/tmp
 spec/dummy/.sass-cache
 vendor/bundle
