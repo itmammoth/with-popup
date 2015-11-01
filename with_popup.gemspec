@@ -10,8 +10,11 @@ Gem::Specification.new do |s|
   s.authors     = ["itmammoth"]
   s.email       = ["itmammoth@gmail.com"]
   s.homepage    = "https://github.com/itmammoth/with-popup"
-  s.summary     = "WithPopup allows you to open a popup window on submitting."
-  s.description = "TODO: Description of WithPopup."
+  s.summary     = "A rubygem for rails application to open and manage a popup window."
+  s.description = <<-EOF
+    WithPopup is a simple rubygem for rails application.
+    It allows you to easily open and manage a popup window, which is NOT controlled by popup blocker.
+  EOF
 
   s.files = Dir["{app,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]
@@ -26,4 +29,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'launchy'
   s.add_development_dependency 'pry-rails'
   s.add_development_dependency 'pry-byebug'
+  s.add_development_dependency 'quiet_assets'
 end
