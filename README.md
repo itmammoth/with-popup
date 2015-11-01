@@ -5,7 +5,7 @@ WithPopup makes it easy to open and manage a popup window in your rails applicat
 
 ## Demo
 
-<img alt=”Demo" src=”http://imgur.com/HQKzftT” />
+![Demo](http://imgur.com/HQKzftT "Demo")
 
 ## Requirement
 
