@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = WithPopup::VERSION
   s.authors     = ["itmammoth"]
   s.email       = ["itmammoth@gmail.com"]
-  s.homepage    = "https://github.com/itmammoth/with-popup"
+  s.homepage    = "https://github.com/itmammoth/with_popup"
   s.summary     = "A rubygem for rails application to open and manage a popup window."
   s.description = <<-EOF
     WithPopup is a simple rubygem for rails application.

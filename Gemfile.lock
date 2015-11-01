@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    with_popup (0.0.1)
+    with_popup (0.0.2)
       jquery-rails (~> 3.0)
       rails (~> 4.0)
 
