@@ -1,6 +1,3 @@
-require 'with_popup/controller'
-require 'with_popup/helpers'
-
 module WithPopup
   class Engine < ::Rails::Engine
     require 'jquery-rails'
