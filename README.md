@@ -10,7 +10,7 @@ WithPopup makes it easy to open and manage a popup window in your rails applicat
 ## Requirement
 
 * rails ~> 4.0
-* jquery-rails ~> 3.0
+* jquery-rails >= 3.0, < 5.0
 
 ## Installation
 
