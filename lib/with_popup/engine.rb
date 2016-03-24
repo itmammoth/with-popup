@@ -5,7 +5,7 @@ module WithPopup
 
     initializer 'with_popup.include_modules' do
       ActiveSupport.on_load :action_controller do
-        include WithPopup::Controller
+        include WithPopup::Controllers::ActionController
       end
       ActiveSupport.on_load :action_view do
         include WithPopup::Helpers::FormTagHelper
