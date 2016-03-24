@@ -7,7 +7,7 @@ class WithPopup::Rack
     @env = env
     @status, @headers, @response = @app.call(env)
     return [@status, @headers, @response] unless need_injection?
-    body = inject_js(@response.body)
+    body = inject_js_to_the_response
     clear_param!
     [@status, @headers, [body]]
   end
@@ -34,7 +34,8 @@ class WithPopup::Rack
     session.delete :_with_popup
   end
 
-  def inject_js(body)
+  def inject_js_to_the_response
+    body = @response.try(:body) || @response.first
     js = popup_param == :close ? close_popup_js : reload_popup_js
     body.sub('</body>', js + '</body>')
   end
