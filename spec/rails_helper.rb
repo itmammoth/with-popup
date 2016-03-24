@@ -11,6 +11,8 @@ require 'capybara/rails'
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
 
+require 'with_popup/test_helpers'
+
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
@@ -54,4 +56,6 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+
+  config.include WithPopup::TestHelpers::Controller, type: :controller
 end
