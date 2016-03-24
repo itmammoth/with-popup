@@ -110,6 +110,28 @@ window.open('', '/loading', 'width=300,height=200');
 | realod_popup(path) | Reload the popup window you opened with indicated path. |
 | close_popup        | Close the popup window you opened.                      |
 
+## Test helpers
+WithPopup provides some test helper methods.
+```ruby
+# In your rails_helper.rb
+
+require 'with_popup/test_helpers'
+
+...
+
+RSpec.configure do |config|
+...
+  config.include WithPopup::TestHelpers::Controller, type: :controller
+...
+end
+```
+
+Then, you can invoke the methods below in controller test context.
+```ruby
+it { expect(with_popup_reloading_path).to match '/reload/path' }
+it { expect(with_popup_is_closing?).to be_truthy }
+```
+
 ## Contribution
 * Fork the master branch, and clone it.
 * Run the ```bundle install``` command to start developing.
